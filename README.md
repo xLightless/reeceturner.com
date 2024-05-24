@@ -8,7 +8,7 @@ This is the main domain of the portfolio website, built with Express.js and Reac
 
 ## Subdomains:
 
-- **API.Tkinter.ReeceTurner.com:** Dive into Tkinter API documentation for Python GUI development. While Tkinter is a popular choice, our intuitive solutions built on Express.js and React offer a more seamless and modern approach to GUI development.
+- **API.Tkinter.ReeceTurner.com:** Dive into Tkinter API documentation for Python GUI development. While Tkinter is a popular choice, our intuitive solutions built on Express.js and React offer a more seamless and modern approach to GUI development by building on top of the modern architecture of Tkinter.
 - **Tkinter.ReeceTurner.com:** Find resources and tutorials for Tkinter, Python's GUI toolkit. Compare Tkinter's traditional approach to GUI development with our innovative solutions running on Express.js and React, and experience the difference in intuitiveness firsthand.
 
 ## Usage
