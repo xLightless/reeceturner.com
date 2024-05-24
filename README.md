@@ -1,5 +1,3 @@
-# Reece Turner (dot) Com
-
 Welcome to ReeceTurner.com! This repository serves as the central hub for Reece Turner's portfolio website, utilizing Express.js and React to offer an intuitive GUI development experience. Explore various digital creations showcasing skills and creativity, with a focus on efficient API management and GUI building using computer science principles.
 
 ## Domain: ReeceTurner.com
