@@ -11,7 +11,7 @@ This is the main domain of the portfolio website, powered by Express.js and Reac
 
 ## Usage
 
-Feel free to explore the projects hosted on ReeceTurner.com and its subdomains. Our Express.js and React-powered solutions offer a smooth and efficient experience for developers and users alike, grounded in computer science principles. If you have any questions or feedback, don't hesitate to reach out.
+Feel free to explore the projects hosted on ReeceTurner.com and its subdomains. Our Express.js and React-powered solutions offer a smooth and efficient experience for developers and users alike, grounded in computer science principles. If you have any questions or feedback, don't hesitate to reach out at: business@reeceturner.com.
 
 ## Contributing
 
