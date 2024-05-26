@@ -1,30 +1,29 @@
-import React, { useState } from 'react';
-import './App.css';
+import React from 'react';
 
-function App() {
-  // State for storing the count
-  const [count, setCount] = useState(0);
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-  // Function to handle incrementing the count
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
+// CSS
+import './styles/App.scss';
+import './styles/tailwind.scss';
 
-  // Function to handle decrementing the count
-  const decrementCount = () => {
-    setCount(count - 1);
-  };
 
+const Main = () => {
+   return (
+    <main role='main'>
+
+    </main>
+   );
+};
+
+const App = () => {
   return (
     <div className="app">
-      <h1>Counter App</h1>
-      <div className="counter">
-        <button onClick={decrementCount}>-</button>
-        <span>{count}</span>
-        <button onClick={incrementCount}>+</button>
-      </div>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start-server": "node server/server.js",
+    "start-server-main": "cd client/main-app && npm run start",
+    "start-server-tk": "cd client/tkinter-app && npm run start",
     "build-main-app": "cd client/main-app && npm run build",
     "build-tkinter-app": "cd client/tkinter-app && npm run build",
     "build-all": "npm run build-main-app && npm run build-tkinter-app"
@@ -13,5 +15,10 @@
   "description": "",
   "dependencies": {
     "vhost": "^3.0.2"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1",
+    "sass": "^1.77.2",
+    "tailwindcss": "^3.4.3"
   }
 }
