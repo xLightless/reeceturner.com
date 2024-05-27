@@ -2,9 +2,10 @@
   "name": "reeceturner.com",
   "version": "1.0.0",
   "scripts": {
-    "start-server": "node server/server.js",
-    "start-server-main": "cd client/main-app && npm run start",
-    "start-server-tk": "cd client/tkinter-app && npm run start",
+    "start-prod-server": "npm run build-all && node server/server.js",
+    "start-dev-server": "npm run start-main-app && npm run start-tkinter-app",
+    "start-main-app": "cd client/main-app && npm run start",
+    "start-tk-app": "cd client/tkinter-app && npm run start",
     "build-main-app": "cd client/main-app && npm run build",
     "build-tkinter-app": "cd client/tkinter-app && npm run build",
     "build-all": "npm run build-main-app && npm run build-tkinter-app"
@@ -14,6 +15,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "vhost": "^3.0.2"
   },
   "devDependencies": {

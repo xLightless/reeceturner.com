@@ -1,11 +1,8 @@
 const express = require('express');
 const vhost = require('vhost');
-const dotenv = require("dotenv");
 const mainAppRoutes = require('./routes/mainAppRoutes');
 const tkinterAppRoutes = require('./routes/tkinterAppRoutes');
 const tkinterAppAPI = require('./routes/api/tkinter/v1/tkinterAppAPI');
-
-dotenv.config({ path: "./env" });
 
 const app = express();
 
