@@ -8,7 +8,7 @@ import '../styles/tailwind.scss';
 const Nav = () => {
   return (
     <nav className="relative bg-black fixed w-full z-20 top-0 start-0 border-b border-gray-600">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://reeceturner.com/" className="flex items-center space-x-3">
           {/* <span className="self-center text-2xl font-semibold text-white">&lt;/&gt;</span> */}
           <FontAwesomeIcon icon={faCode} className='text-white text-3xl'/>
@@ -46,7 +46,7 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <header className='sticky top-0 bg-white shadow-md z-50 w-full'>
+    <header className='sticky top-0 bg-white shadow-md z-9 w-full'>
       <Nav />
     </header>
   );

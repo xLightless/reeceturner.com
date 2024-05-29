@@ -18,8 +18,8 @@ const ContentFrame = () => {
 
 
   return (
-  <div className='content-frame flex flex-col items-center md:flex-row justify-center'>
-    <div className='w-full md:w-2/4 py-12'>
+  <div className='content-frame flex flex-col justify-center items-center md:flex-row justify-center mx-auto'>
+    <div className='w-full md:w-8/12 my-12 mx-24 sm:mx-12 max-w-fit'>
       <div className='grid w-full grid-cols-1 gap-8 mx-auto md:grid-cols-3 lg:grid-cols-3'>
         <div className='w-full text-center md:text-left'>
           <p className="block mb-4 font-sans text-sm antialiased font-bold leading-normal uppercase opacity-50 text-white">
@@ -106,7 +106,7 @@ const ContentFrame = () => {
       </div>
     </div>
 
-    <div className='w-full md:w-1/4 py-12'>
+    <div className='w-full md:w-4/12 my-12 mx-24 sm:mx-12 max-w-fit'>
       <div className='w-full flex justify-center items-center flex-col'>
         <div className='block transition-transform'>
           <div className="flex gap-4 text-white sm:justify-center">
@@ -156,7 +156,7 @@ const Copyright = () => {
 
 const Footer = () => {
   return (
-    <footer className="footer relative w-full">
+    <footer className="footer relative w-full mx-auto">
       <ContentFrame />
       <Copyright />
     </footer>
