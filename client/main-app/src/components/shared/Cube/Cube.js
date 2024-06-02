@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../styles/tailwind.scss'; // Import Cube styles
+import React from 'react';
+import '../../../assets/styles/tailwind.scss'; // Import Cube styles
 
 export const Cube = ({ cubeSize, rotationX, rotationY, offsetX = 0, offsetY = 0, offsetZ = 0, color = 'rgba(255, 255, 255, 0.8)', shadow = false, shadowColor = 'rgba(255, 255, 255, 1)' }) => {
   const cubeStyle = {
@@ -37,3 +37,10 @@ export const Cube = ({ cubeSize, rotationX, rotationY, offsetX = 0, offsetY = 0,
   );
 };
 
+
+
+export const ResizableCube = ({ width, height, ...cubeProps }) => {
+  return (
+    <Cube cubeSize={Math.min(width, height)} {...cubeProps} />
+  );
+};

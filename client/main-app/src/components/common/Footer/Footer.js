@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
-import '../styles/Footer.scss';
+import './Footer.scss';
 
 
 const ContentFrame = () => {

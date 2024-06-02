@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
-import '../styles/Header.scss';
-import '../styles/tailwind.scss';
+import './Header.scss';
+import '../../../assets/styles/tailwind.scss';
 
 const Nav = () => {
   return (
@@ -46,7 +46,7 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <header className='sticky top-0 bg-white shadow-md z-9 w-full'>
+    <header id="header" className='sticky top-0 bg-white shadow-md z-9 w-full'>
       <Nav />
     </header>
   );
