@@ -136,7 +136,7 @@ const ContentFrame = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center transition-transform text-white" onClick={copyToClipboard}>
+        <div id="contact" className="flex flex-col justify-center items-center transition-transform text-white" onClick={copyToClipboard}>
             <p className='block font-sans hover:scale-105'>business@reeceturner.com</p>
             <p className='block font-sans text-sm antialiased leading-normal opacity-50 text-white'>{text}</p>
         </div>
