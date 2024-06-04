@@ -7,6 +7,7 @@ import Footer from './components/common/Footer/Footer';
 
 // HOOKS
 import useMousePosition from './hooks/Mouse/useMousePosition';
+import useScrollPosition from './hooks/Mouse/useScrollPosition';
 import useMouseShadow from './hooks/Mouse/useMouseShadow';
 import { MouseShadow } from './hooks/Mouse/mouse';
 
@@ -41,6 +42,9 @@ const Main = () => {
 };
 
 const App = () => {
+  const { scrollPosition } = useScrollPosition();
+  document.body.addEventListener('scroll', console.log(scrollPosition));
+
   return (
     <div className="app">
         <Advertisement advertLink={tkinterLink} />

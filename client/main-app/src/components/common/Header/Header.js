@@ -7,7 +7,7 @@ import '../../../assets/styles/tailwind.scss';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isNavLinkClicked, setElementFlashState] = useState(false);
+  // const [isNavLinkClicked, setElementFlashState] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,7 +31,7 @@ const Nav = () => {
         </div>
 
         <div className={`pt-4 md:pt-0 items-center justify-between w-full md:flex md:w-auto md:order-1 mt-4 border-t border-t-3px border-gray-900 md:border-none md:mt-0 ${isMenuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
-          <ul className="flex flex-col md:flex-row font-medium md:space-x-8 md:mt-0">
+          <ul className="flex flex-col md:flex-row font-medium md:space-x-8 md:mt-0" onClick={toggleMenu}>
             <li className='hover:bg-indigo-500' id="nav-experience">
               {/* eslint-disable jsx-a11y/anchor-is-valid */}
               <a href="#experience" className="block py-2 px-3 text-white rounded font-sans" aria-current="page">Experience</a>

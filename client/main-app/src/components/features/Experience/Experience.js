@@ -1,6 +1,8 @@
 // import { useState } from "react";
 // import { useHoveredElementId } from "../../../hooks/Mouse/mouse";
 
+import InfiniteScrollCarousel from "../../shared/Carousel/Carousel";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,7 +42,7 @@ const Experience = () => {
                 <li className='text-white text-left font-sans text-md'>Feb 2022 - May 2022</li>
                 <li className='mt-4'>
                   <div className='w-full aspect-video video'>
-                    <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/gWEz8ktEuuQ?si=iTuZGnc5L6fzaAQL&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer;"></iframe>
+                    <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/gWEz8ktEuuQ?si=iTuZGnc5L6fzaAQL&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0" title="YouTube video player" allow="accelerometer;"></iframe>
                   </div>
                 </li>
                 <li className='text-white text-left font-sans text-sm mt-4 text-justify'>
@@ -55,7 +57,7 @@ const Experience = () => {
                 <li className='text-white text-left font-sans text-md'>Feb 2022 - May 2022</li>
                 <li className='mt-4'>
                   <div className='w-full aspect-video video'>
-                    <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/gWEz8ktEuuQ?si=iTuZGnc5L6fzaAQL&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer;"></iframe>
+                    <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/gWEz8ktEuuQ?si=iTuZGnc5L6fzaAQL&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0" title="YouTube video player" allow="accelerometer;"></iframe>
                   </div>
                 </li>
                 <li className='text-white text-left font-sans text-sm mt-4 text-justify'>
@@ -70,7 +72,7 @@ const Experience = () => {
                 <li className='text-white text-left font-sans text-md'>Feb 2022 - May 2022</li>
                 <li className='mt-4'>
                   <div className='w-full aspect-video video'>
-                    <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/gWEz8ktEuuQ?si=iTuZGnc5L6fzaAQL&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer;"></iframe>
+                    <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/gWEz8ktEuuQ?si=iTuZGnc5L6fzaAQL&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0" title="YouTube video player" allow="accelerometer;"></iframe>
                   </div>
                 </li>
                 <li className='text-white text-left font-sans text-sm mt-4 text-justify'>
@@ -86,6 +88,8 @@ const Experience = () => {
 
           </div>
         </div>
+
+        <InfiniteScrollCarousel />
       </section>
     );
   };
