@@ -1,14 +1,19 @@
 import { useState, useEffect } from 'react';
 
+interface MousePosition {
+  x: number;
+  y: number;
+}
+
 const useMousePosition = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredElement, setHoveredElement] = useState(null);
+  const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
+  const [hoveredElement, setHoveredElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       setMousePosition({ x: event.pageX, y: event.pageY });
       const hovered = document.elementFromPoint(event.clientX, event.clientY);
-      setHoveredElement(hovered);
+      if (hovered) setHoveredElement(hovered as HTMLElement);
     };
 
     document.addEventListener('mousemove', handleMouseMove);

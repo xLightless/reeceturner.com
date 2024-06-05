@@ -4,7 +4,7 @@ const useMouseShadow = () => {
   const [showShadow, setShowShadow] = useState(true);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       const element = document.elementFromPoint(event.clientX, event.clientY);
       if (element && element.tagName.toLowerCase() !== 'main' && !element.closest('main')) {
         setShowShadow(false);

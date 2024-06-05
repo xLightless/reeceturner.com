@@ -1,4 +1,6 @@
-const Advertisement = ({advertLink}) => {
+import React from "react";
+
+const Advertisement = ({advertLink}: {advertLink: string}) => {
     return (
     <div id="advert" className='w-full h-20 bg-gradient-to-r from-cyan-400 to-cyan-600 flex justify-center items-center advert p-4'>
         <p className='text-sm md:text-base lg:text-lg xl:text-xl text-center'>

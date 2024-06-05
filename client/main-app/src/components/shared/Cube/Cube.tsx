@@ -1,8 +1,30 @@
 import React from 'react';
 import '../../../assets/styles/tailwind.scss'; // Import Cube styles
 
-export const Cube = ({ cubeSize, rotationX, rotationY, offsetX = 0, offsetY = 0, offsetZ = 0, color = 'rgba(255, 255, 255, 0.8)', shadow = false, shadowColor = 'rgba(255, 255, 255, 1)' }) => {
-  const cubeStyle = {
+interface CubeProps {
+  cubeSize: number;
+  rotationX: number;
+  rotationY: number;
+  offsetX?: number;
+  offsetY?: number;
+  offsetZ?: number;
+  color?: string;
+  shadow?: boolean;
+  shadowColor?: string;
+}
+
+export const Cube: React.FC<CubeProps> = ({
+  cubeSize,
+  rotationX,
+  rotationY,
+  offsetX = 0,
+  offsetY = 0,
+  offsetZ = 0,
+  color = 'rgba(255, 255, 255, 0.8)',
+  shadow = false,
+  shadowColor = 'rgba(255, 255, 255, 1)'
+}) => {
+  const cubeStyle: React.CSSProperties = {
     position: 'absolute',
     width: `${cubeSize}px`,
     height: `${cubeSize}px`,
@@ -11,7 +33,7 @@ export const Cube = ({ cubeSize, rotationX, rotationY, offsetX = 0, offsetY = 0,
     zIndex: cubeSize + offsetZ
   };
 
-  const sideStyle = {
+  const sideStyle: React.CSSProperties = {
     position: 'absolute',
     width: '100%',
     height: '100%',
@@ -20,7 +42,7 @@ export const Cube = ({ cubeSize, rotationX, rotationY, offsetX = 0, offsetY = 0,
     boxSizing: 'border-box'
   };
 
-  const bottomSideStyle = shadow ? {
+  const bottomSideStyle: React.CSSProperties = shadow ? {
     ...sideStyle,
     boxShadow: `0px 0px 100px ${shadowColor}` // Add drop shadow to the bottom side with specified color
   } : sideStyle;
@@ -37,9 +59,12 @@ export const Cube = ({ cubeSize, rotationX, rotationY, offsetX = 0, offsetY = 0,
   );
 };
 
+interface ResizableCubeProps extends Omit<CubeProps, 'cubeSize'> {
+  width: number;
+  height: number;
+}
 
-
-export const ResizableCube = ({ width, height, ...cubeProps }) => {
+export const ResizableCube: React.FC<ResizableCubeProps> = ({ width, height, ...cubeProps }) => {
   return (
     <Cube cubeSize={Math.min(width, height)} {...cubeProps} />
   );

@@ -1,31 +1,28 @@
-// import { useState } from "react";
-// import { useHoveredElementId } from "../../../hooks/Mouse/mouse";
-
+import React from "react";
 import InfiniteScrollCarousel from "../../shared/Carousel/Carousel";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Experience = () => {
-
-  const handleMouseEnter = (id) => {
-    const elements = document.querySelectorAll('.grid-item');
+  const handleMouseEnter = (id: string) => {
+    const elements = document.querySelectorAll('.grid-item') as NodeListOf<HTMLElement>;
     elements.forEach((element) => {
-      if (element.id !== id) {
-        element.style.opacity = 0.3;
-        element.style.transform = "scale(0.8)";
-        element.style.transition = "opacity 0.5s, transform 0.3s";
+      if (element && element.id !== id) {
+        element.style.opacity = '0.3';
+        element.style.transform = 'scale(0.8)';
+        element.style.transition = 'opacity 0.5s, transform 0.3s';
       }
     });
   };
 
-  const handleMouseLeave = () => {
-    const elements = document.querySelectorAll('.grid-item');
-    elements.forEach((element) => {
-      element.style.opacity = 1;
-      element.style.transform = "scale(1)";
-    });
-  };
+const handleMouseLeave = () => {
+  const elements = document.querySelectorAll('.grid-item') as NodeListOf<HTMLElement>;
+  elements.forEach((element) => {
+    element.style.opacity = '1';
+    element.style.transform = 'scale(1)';
+  });
+};
 
     return (
       <section id="experience" className="w-full max-w-screen-2xl h-fit mx-auto flex flex-col justify-center items-center p-4">

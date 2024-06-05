@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 // COMPONENTS
 import Advertisement from './components/common/Ads/advert';
 import Header from './components/common/Header/Header';
@@ -9,7 +11,7 @@ import Footer from './components/common/Footer/Footer';
 import useMousePosition from './hooks/Mouse/useMousePosition';
 import useScrollPosition from './hooks/Mouse/useScrollPosition';
 import useMouseShadow from './hooks/Mouse/useMouseShadow';
-import { MouseShadow } from './hooks/Mouse/mouse';
+import MouseShadow from './hooks/Mouse/mouse';
 
 // CSS
 import './assets/styles/App.scss';
@@ -23,9 +25,9 @@ const tkinterLink = (env_mode === "production") ? `http://tkinter.localhost` : `
 // const apiTkinterLink = `http://api.tkinter.localhost`;
 
 
-const Main = () => {
+const Main: React.FC = () => {
   const { mousePosition } = useMousePosition();
-  const { showShadow } = useMouseShadow(); // We don't need the toggle function here
+  const { showShadow } = useMouseShadow();
 
   return (
     <main id="main" role='main' className='relative min-h-screen overflow-hidden bg-black'>
@@ -41,9 +43,21 @@ const Main = () => {
   );
 };
 
-const App = () => {
-  const { scrollPosition } = useScrollPosition();
-  document.body.addEventListener('scroll', console.log(scrollPosition));
+const App: React.FC = () => {
+
+  const scrollPosition = useScrollPosition();
+  const getScrollPosition = () => {
+    return scrollPosition;
+  };
+
+  useEffect(() => {
+
+    document.addEventListener('scroll', getScrollPosition);
+
+    return () => {
+      document.removeEventListener('scroll', getScrollPosition);
+    }
+  }, []);
 
   return (
     <div className="app">

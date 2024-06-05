@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Cube } from "../../shared/Cube/Cube";
 
 
-const Landing = () => {
+const Landing: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
   const [landingPageHeight, setLandingPageHeight] = useState('100vh');
 
@@ -10,7 +10,7 @@ const Landing = () => {
     const header = document.getElementById('header');
     const advert = document.getElementById('advert');
     let headerHeight = (header) ? window.getComputedStyle(header).height : "0px";
-    let advertHeight = (advert) ? window.getComputedStyle(header).height : "0px";
+    let advertHeight = (advert) ? window.getComputedStyle(advert).height : "0px";
 
     return `${headerHeight} - ${advertHeight}`;
   };
