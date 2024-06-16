@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.btnDimensions {
+    // width: 84px;
+    width: fit-content;
+    height: 27px;
+
+    button {
+        background-color: #070E0D;
+        border-radius: 90px;
+
+
+        p {
+            color: #88FDD3;
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            font-weight: 500;
+            // font-size: 0.85rem;
+        }
+    }
+}

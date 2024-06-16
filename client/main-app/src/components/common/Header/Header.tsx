@@ -38,7 +38,7 @@ const Nav = () => {
             </li>
             <li className='hover:bg-indigo-500'>
               {/* eslint-disable jsx-a11y/anchor-is-valid */}
-              <a href="#" className="block py-2 px-3 text-white rounded font-sans">Projects</a>
+              <a href="#projects" className="block py-2 px-3 text-white rounded font-sans">Projects</a>
             </li>
             <li className='hover:bg-indigo-500'>
               {/* eslint-disable jsx-a11y/anchor-is-valid */}

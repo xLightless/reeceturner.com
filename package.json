@@ -4,6 +4,7 @@
   "scripts": {
     "start-prod-server": "npm run build-all && node server/server.js",
     "start-dev-server": "npm run start-main-app && npm run start-tkinter-app",
+    "start-main-server": "npm run build-main-app && node server/server.js",
     "start-main-app": "cd client/main-app && npm run start",
     "start-tk-app": "cd client/tkinter-app && npm run start",
     "build-main-app": "cd client/main-app && npm run build",

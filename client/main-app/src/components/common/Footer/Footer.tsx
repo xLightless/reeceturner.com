@@ -149,7 +149,7 @@ const ContentFrame = () => {
 const Copyright = () => {
   return (
     <div className='copyright-frame'>
-    <p>&copy; 2021-2024, ReeceTurner.com</p>
+    <p>&copy; 2021-2024, ReeceTurner.com.</p>
    </div>
   );
 }

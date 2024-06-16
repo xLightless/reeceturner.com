@@ -25,7 +25,7 @@ const handleMouseLeave = () => {
 };
 
     return (
-      <section id="experience" className="w-full max-w-screen-2xl h-fit mx-auto flex flex-col justify-center items-center p-4">
+      <section id="experience" className="w-full max-w-screen-2xl mx-auto flex flex-col justify-center items-center p-4">
         <div className='w-full h-full'>
           <div className='w-full h-fit mb-4'>
             <h1 className="text-white text-left text-5xl md:text-7xl font-sans font-bold">Experience</h1>
@@ -78,7 +78,7 @@ const handleMouseLeave = () => {
               </ul>
             </div>
 
-            <div className="w-full h-fit col-span-1 lg:cols-span-3">
+            <div className="w-full h-fit col-span-1 md:cols-span-3">
               {/* Add downloadable resume */}
               <a href="https://reeceturner.com" className="text-cyan-500 font-bold text-left">View Resumé <span className=""><FontAwesomeIcon icon={faArrowUp} style={{rotate: "45deg"}}/></span></a>
             </div>

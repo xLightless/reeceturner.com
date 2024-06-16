@@ -1,0 +1,25 @@
+.overlay {
+    min-height: 180px;
+    width: 320px;
+    // width: 100%;
+    // height: 100%;
+    background: red;
+}
+
+.animate-overlay-x {
+    transform: translateX(-150px);
+}
+
+
+$transition-duration: 0.3s;
+$transition-timing-function: ease-in-out;
+.project {
+  border: 1px solid gray;
+  transition: all $transition-duration $transition-timing-function;
+
+  // Hover state
+  &:hover {
+    transform: scale(1.05); // Slightly scale up the project item
+    border-color: #ff6347; // Change border color on hover
+  }
+}
