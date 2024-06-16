@@ -118,7 +118,7 @@ const PageNotFound: React.FC = () => {
       <Advertisement advertLink={tkinterLink} />
       <Header />
       <Main mouseShadow={showShadow ? <MouseShadow mousePosition={mousePosition} /> : null}>
-        <div className="relative h-screen">
+        <div id="main" className="relative h-screen">
           <div className="w-full h-full">
             <img className="object-cover opacity-5 bg-blend-lighten md:bg-blend-darken w-full h-screen" src="https://img.freepik.com/free-photo/robot-decorating-with-wallpaper_1048-12084.jpg?t=st=1718558462~exp=1718562062~hmac=9bcb0227832ccf88abacf49dda0f5ebb769b5f7ca4907b7c1f6e662408ed4c94&w=1380"></img>
           </div>
