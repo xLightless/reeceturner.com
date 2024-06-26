@@ -27,11 +27,11 @@ const handleMouseLeave = () => {
     return (
       <section id="experience" className="w-full max-w-screen-2xl mx-auto flex flex-col justify-center items-center p-4">
         <div className='w-full h-full'>
-          <div className='w-full h-fit mb-4'>
+          <div className='w-full h-fit mb-14'>
             <h1 className="text-white text-left text-5xl md:text-7xl font-sans font-bold">Experience</h1>
           </div>
 
-          <div className='w-full grid grid-cols-1 grid-rows-4 gap-12 lg:grid-cols-3 md:grid-rows-1'>
+          <div className='w-full h-fit grid grid-cols-1 grid-rows-3 gap-12 lg:grid-cols-3 md:grid-rows-1'>
 
             <div className='grid-item' id='item1' onMouseEnter={() => handleMouseEnter('item1')} onMouseLeave={handleMouseLeave}>
               <ul className='list-none mt-4 hover:drop-shadow-sm'>
@@ -78,12 +78,11 @@ const handleMouseLeave = () => {
               </ul>
             </div>
 
-            <div className="w-full h-fit col-span-1 md:cols-span-3">
-              {/* Add downloadable resume */}
-              <a href="https://reeceturner.com" className="text-cyan-500 font-bold text-left">View Resumé <span className=""><FontAwesomeIcon icon={faArrowUp} style={{rotate: "45deg"}}/></span></a>
-            </div>
-
           </div>
+          <div className="w-full h-fit mt-14 mb-14">
+              {/* Add downloadable resume */}
+              <a href="/resume" className="text-cyan-500 font-bold text-left">View Resumé <span className=""><FontAwesomeIcon icon={faArrowUp} style={{rotate: "45deg"}}/></span></a>
+            </div>
         </div>
 
         <InfiniteScrollCarousel />

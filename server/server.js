@@ -1,5 +1,9 @@
 const express = require('express');
 const vhost = require('vhost');
+const dotenv = require('dotenv');
+const path = require('path');
+
+dotenv.config({ path: path.resolve('./.env')});
 
 
 const mainAppRoutes = require('./routes/mainAppRoutes');
@@ -10,12 +14,12 @@ const tkinterAppAPI = require('./routes/api/tkinter/v1/tkinterAppAPI');
 const app = express();
 
 // APP ROUTES
-app.use(vhost('localhost', mainAppRoutes));
+app.use(vhost(`${process.env.HOST}`, mainAppRoutes));
 // app.use(vhost('localhost', linkedInAPI));
-app.use(vhost('tkinter.localhost', tkinterAppRoutes));
+app.use(vhost(`tkinter.${process.env.HOST}`, tkinterAppRoutes));
 
 // API CALL ROUTES
-app.use(vhost('api.tkinter.localhost', tkinterAppAPI));
+app.use(vhost(`api.tkinter.${process.env.HOST}`, tkinterAppAPI));
 
 // Start the Express server
 const PORT = process.env.PORT || 5000;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // COMPONENTS
 import Advertisement from './components/common/Ads/advert';
@@ -7,11 +7,11 @@ import Header from './components/common/Header/Header';
 import Landing from './components/features/Landing/Landing';
 import Experience from './components/features/Experience/Experience';
 import Footer from './components/common/Footer/Footer';
-import Archive from "./components/features/Archive/Archive";
+// import Archive from "./components/features/Archive/Archive";
 
 // HOOKS
 import useMousePosition from './hooks/Mouse/useMousePosition';
-import useScrollPosition from './hooks/Mouse/useScrollPosition';
+import useScrollYPosition from './hooks/Mouse/useScrollPosition';
 import useMouseShadow from './hooks/Mouse/useMouseShadow';
 import MouseShadow from './hooks/Mouse/mouse';
 
@@ -19,6 +19,7 @@ import MouseShadow from './hooks/Mouse/mouse';
 import './assets/styles/App.scss';
 import './assets/styles/tailwind.scss';
 import Projects from "./components/features/Projects/Projects";
+import PDFViewer from "./components/shared/PDF/PDFViewer";
 
 // Update these constants on production
 // eslint-disable-next-line no-restricted-globals
@@ -106,7 +107,6 @@ const PageNotFound: React.FC = () => {
   const { mousePosition } = useMousePosition();
   const { showShadow } = useMouseShadow();
   const urlPathName = window.location.pathname;
-  const location = useLocation();
 
   // Function to go back to the previous page
   const goBack = () => {
@@ -120,13 +120,13 @@ const PageNotFound: React.FC = () => {
       <Main mouseShadow={showShadow ? <MouseShadow mousePosition={mousePosition} /> : null}>
         <div id="main" className="relative h-screen">
           <div className="w-full h-full">
-            <img className="object-cover opacity-5 bg-blend-lighten md:bg-blend-darken w-full h-screen" src="https://img.freepik.com/free-photo/robot-decorating-with-wallpaper_1048-12084.jpg?t=st=1718558462~exp=1718562062~hmac=9bcb0227832ccf88abacf49dda0f5ebb769b5f7ca4907b7c1f6e662408ed4c94&w=1380"></img>
+            <img className="object-cover opacity-5 bg-blend-lighten md:bg-blend-darken w-full h-screen" src="https://img.freepik.com/free-photo/robot-decorating-with-wallpaper_1048-12084.jpg?t=st=1718558462~exp=1718562062~hmac=9bcb0227832ccf88abacf49dda0f5ebb769b5f7ca4907b7c1f6e662408ed4c94&w=1380" alt="Page not available."></img>
           </div>
           <div className="absolute top-0 left-0 w-full h-full p-4 flex flex-col justify-center items-center p-4">
             <p className="text-5xl text-white font-bold mb-24 text-center">404</p>
             <p className="text-3xl text-white font-bold mb-12 text-center">'{urlPathName}' does not exist on this server.</p>
             <p className="text-neutral-600 text-lg text-center">Lets take you back to the <strong className="underline underline-offset-8 hover:text-white">
-              <a onClick={goBack}>previous page</a>
+              <span onClick={goBack}>previous page</span>
               </strong>.
             </p>
           </div>
@@ -138,20 +138,18 @@ const PageNotFound: React.FC = () => {
 }
 
 const App: React.FC = () => {
-
-  const scrollPosition = useScrollPosition();
-  const getScrollPosition = () => {
-    return scrollPosition;
-  };
+  const scrollPosition = useScrollYPosition();
 
   useEffect(() => {
 
-    document.addEventListener('scroll', getScrollPosition);
+    document.addEventListener('scroll', () => scrollPosition);
 
     return () => {
-      document.removeEventListener('scroll', getScrollPosition);
-    }
-  }, []);
+      document.removeEventListener('scroll', () => scrollPosition);
+    };
+  }, [scrollPosition]);
+
+  const pdfFile = '/reece_turner_resume.pdf';
 
   return (
     <Router>
@@ -159,7 +157,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/archive" element={<ArchiveIndex />} />
-            <Route path="/auth/linkedin/callback"/>
+            <Route path="/resume" element={<PDFViewer file={pdfFile}/>} />
+            {/* <Route path="/auth/linkedin/callback"/> */}
             <Route path="*" element={<PageNotFound />}/>
           </Routes>
       </div>

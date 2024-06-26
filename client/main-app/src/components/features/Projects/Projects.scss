@@ -14,12 +14,46 @@
 $transition-duration: 0.3s;
 $transition-timing-function: ease-in-out;
 .project {
-  border: 1px solid gray;
+  // border: 1px solid gray;
   transition: all $transition-duration $transition-timing-function;
 
   // Hover state
   &:hover {
     transform: scale(1.05); // Slightly scale up the project item
     border-color: #ff6347; // Change border color on hover
+  }
+}
+
+
+.moving-border {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.moving-border::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #f00, #0f0, #00f, #ff0, #f0f, #0ff, #f00); /* Gradient with desired colors */
+  background-size: 400% 400%; /* Make the gradient large to create the shifting effect */
+  z-index: -1;
+  border-radius: 0.5rem; /* Adjust border radius as needed */
+  animation: gradientShift 10s ease infinite; /* Adjust duration and timing function as needed */
+}
+
+@keyframes gradientShift {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
   }
 }
