@@ -1,6 +1,11 @@
 import { ListPictureItem } from "@/components/list-item";
 import React from "react";
 
+import rade from '../../assets/images/modelling_editor_interface_wireframe.png';
+import mlaas from '../../assets/images/enterprise_claims_handling.png';
+import algorithms from '../../assets/images/algorithms_tco.png';
+import lstm from '../../assets/images/lstm.png';
+
 const Projects: React.FC = () => {
     return (
         <section className="pt-24" id="projects">
@@ -13,7 +18,7 @@ const Projects: React.FC = () => {
                 <ul className="flex flex-col space-y-4">
                     <a href="https://github.com/xLightless/RADE/">
                         <ListPictureItem
-                            imageSrc={"public/assets/images/modelling_editor_interface_wireframe.png"}
+                            imageSrc={rade}
                             imageAlt={"A graphical user interface designer using nodes."}
                             title={"RADE"}
                             createdAt={"University"}
@@ -23,7 +28,7 @@ const Projects: React.FC = () => {
 
                     <a href="https://github.com/xLightless/uwe-enterprise-mlaas/">
                         <ListPictureItem
-                            imageSrc={"public/assets/images/enterprise_claims_handling.png"}
+                            imageSrc={mlaas}
                             imageAlt={"Insurance claims handling on an enterprise MLaaS platform."}
                             title={"Distributed MLaaS"}
                             createdAt={"University"}
@@ -33,7 +38,7 @@ const Projects: React.FC = () => {
 
                     <a href="https://github.com/xLightless/uni-advanced-algorithms/">
                         <ListPictureItem
-                            imageSrc={"public/assets/images/algorithms_tco.png"}
+                            imageSrc={algorithms}
                             imageAlt={"Data structures and algorithms."}
                             title={"Data Structures and Algorithms"}
                             createdAt={"University"}
@@ -43,7 +48,7 @@ const Projects: React.FC = () => {
 
                     <a href="https://github.com/xLightless/uni-machine-learning/">
                         <ListPictureItem
-                            imageSrc={"public/assets/images/lstm.png"}
+                            imageSrc={lstm}
                             imageAlt={"LSTM model for time series prediction."}
                             title={"Predicting Bitcoin Prices with LSTMs"}
                             createdAt={"University"}
