@@ -1,5 +1,4 @@
 import { ListItem } from "@/components/list-item";
-import React from "react";
 
 const Experience = () => {
     return (
