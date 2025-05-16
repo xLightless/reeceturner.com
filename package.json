@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "github-calendar": "^2.3.4",
+    "react-snowfall": "^2.2.0"
+  }
+}
