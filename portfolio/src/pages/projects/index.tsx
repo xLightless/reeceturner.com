@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
                 <ul className="flex flex-col space-y-4">
                     <a href="https://github.com/xLightless/RADE/">
                         <ListPictureItem
-                            imageSrc={"src/assets/images/modelling_editor_interface_wireframe.png"}
+                            imageSrc={"public/assets/images/modelling_editor_interface_wireframe.png"}
                             imageAlt={"A graphical user interface designer using nodes."}
                             title={"RADE"}
                             createdAt={"University"}
@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
 
                     <a href="https://github.com/xLightless/uwe-enterprise-mlaas/">
                         <ListPictureItem
-                            imageSrc={"src/assets/images/enterprise_claims_handling.png"}
+                            imageSrc={"public/assets/images/enterprise_claims_handling.png"}
                             imageAlt={"Insurance claims handling on an enterprise MLaaS platform."}
                             title={"Distributed MLaaS"}
                             createdAt={"University"}
@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
 
                     <a href="https://github.com/xLightless/uni-advanced-algorithms/">
                         <ListPictureItem
-                            imageSrc={"src/assets/images/algorithms_tco.png"}
+                            imageSrc={"public/assets/images/algorithms_tco.png"}
                             imageAlt={"Data structures and algorithms."}
                             title={"Data Structures and Algorithms"}
                             createdAt={"University"}
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
 
                     <a href="https://github.com/xLightless/uni-machine-learning/">
                         <ListPictureItem
-                            imageSrc={"src/assets/images/lstm.png"}
+                            imageSrc={"public/assets/images/lstm.png"}
                             imageAlt={"LSTM model for time series prediction."}
                             title={"Predicting Bitcoin Prices with LSTMs"}
                             createdAt={"University"}
