@@ -15,6 +15,14 @@ const NotFound: React.FC = () => {
   )
 };
 
+const Resume: React.FC = () => {
+  return (
+    <object data="/resume/reece-turner-resume.pdf" type="application/pdf" className='w-full h-screen'>
+        <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
+    </object>
+  )
+};
+
 function App() {
 
   return (
@@ -22,10 +30,11 @@ function App() {
       <Routes>
         {/* Main site page */}
         <Route path="/" element={<Home />} />
+        <Route path="/resume" element={ <Resume /> } />
 
-          {/* Pages not found when changing paths */}
-          <Route path="/404" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
+        {/* Pages not found when changing paths */}
+        <Route path="/404" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   )

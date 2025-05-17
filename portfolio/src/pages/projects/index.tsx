@@ -1,4 +1,6 @@
 import { ListPictureItem } from "@/components/list-item";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons/faArrowUpRightFromSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Projects: React.FC = () => {
@@ -9,7 +11,7 @@ const Projects: React.FC = () => {
             </div>
 
             {/* Projects */}
-            <div className="w-full h-fit mt-4">
+            <div className="w-full h-fit my-4">
                 <ul className="flex flex-col space-y-4">
                     <a href="https://github.com/xLightless/RADE/">
                         <ListPictureItem
@@ -51,6 +53,13 @@ const Projects: React.FC = () => {
                         />
                     </a>
                 </ul>
+            </div>
+
+            <div className='pl-4 relative w-full'>
+                <a className='w-fit flex flex-row items-center justify-start space-x-4' href="https://github.com/xLightless/" target="_blank">
+                    <p className='text-blue-300'>View Projects </p>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-blue-300'/>
+                </a>
             </div>
         </section>
     )

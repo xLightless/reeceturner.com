@@ -22,7 +22,7 @@ const ListPictureItem: React.FC<ListPictureItemProps> = (props) => {
                     <img
                         src={props.imageSrc}
                         alt={props.imageAlt || ''}
-                        className="w-[173px] h-fit rounded object-cover"
+                        className="w-full sm:w-[173px] h-auto rounded object-cover"
                     />
                 </div>
 

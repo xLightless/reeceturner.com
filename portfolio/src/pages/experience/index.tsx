@@ -1,4 +1,6 @@
 import { ListItem } from "@/components/list-item";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons/faArrowUpRightFromSquare";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Experience = () => {
     return (
@@ -8,7 +10,7 @@ const Experience = () => {
             </div>
 
             {/* Experience */}
-            <div className="w-full h-fit mt-4">
+            <div className="w-full h-fit my-4">
                 <ul className="flex flex-col space-y-4">
                     <a href="https://github.com/securejobs/">
                         <ListItem
@@ -37,6 +39,12 @@ const Experience = () => {
                         />
                     </a>
                 </ul>
+            </div>
+            <div className='pl-4 relative w-full'>
+                <a className='w-fit flex flex-row items-center justify-start space-x-4' href="/resume" target="_blank">
+                    <p className='text-blue-300'>View Resume </p>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-blue-300'/>
+                </a>
             </div>
         </section>
     )
