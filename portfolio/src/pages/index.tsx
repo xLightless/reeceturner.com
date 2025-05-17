@@ -38,35 +38,59 @@ const NavItem: React.FC<NavItemProps> = (props) => {
 
 const Navigator: React.FC = () => {
     const [activeNavItemId, setActiveNavItemId] = useState<string | null>("#about");
+    const [manuallyClicked, setManuallyClicked] = useState(false);
+
+    const navItems = [
+        { text: "About", id: "#about" },
+        { text: "Experience", id: "#experience" },
+        { text: "Projects", id: "#projects" },
+    ];
 
     const handleNavClick = useCallback((id: string) => {
+        setManuallyClicked(true);
         setActiveNavItemId(id);
         const element = document.querySelector(id);
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
         }
+        setTimeout(() => setManuallyClicked(false), 800);
     }, []);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            if (manuallyClicked) return;
+            let found = false;
+            for (let i = navItems.length - 1; i >= 0; i--) {
+                const section = document.querySelector(navItems[i].id);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight * 0.5) {
+                        setActiveNavItemId(navItems[i].id);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (!found) {
+                setActiveNavItemId(navItems[0].id);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [manuallyClicked, navItems]);
 
     return (
         <nav className="flex flex-col mt-12">
-            <NavItem
-                text={"About"}
-                id="#about"
-                isActive={activeNavItemId === "#about"}
-                onClick={() => handleNavClick("#about")}
-            />
-            <NavItem
-                text={"Experience"}
-                id="#experience"
-                isActive={activeNavItemId === "#experience"}
-                onClick={() => handleNavClick("#experience")}
-            />
-            <NavItem
-                text={"Projects"}
-                id="#projects"
-                isActive={activeNavItemId === "#projects"}
-                onClick={() => handleNavClick("#projects")}
-            />
+            {navItems.map((item) => (
+                <NavItem
+                    key={item.id}
+                    text={item.text}
+                    id={item.id}
+                    isActive={activeNavItemId === item.id}
+                    onClick={() => handleNavClick(item.id)}
+                />
+            ))}
         </nav>
     );
 };
