@@ -18,13 +18,13 @@ const AboutPage: React.FC = () => {
                 <div className='items-end lg:mt-24'>
                     <div className='relative max-w-xl h-48 sm:h-64 opacity-100'>
                         <img
-                            src="src/assets/images/rade_transposer.png"
+                            src="/images/rade_transposer.png"
                             alt="Graphing Editor"
                             className='w-full h-full object-cover rounded-xl shadow-2xl border-4 border-white/20'
                             style={{ filter: 'brightness(1.15) contrast(1.1)' }}
                         />
                         <img
-                            src="src/assets/images/rade_interface.png"
+                            src="/images/rade_interface.png"
                             alt="Graphing Editor"
                             className='absolute -bottom-4 -right-4 w-2/3 h-2/3 object-cover rounded-xl shadow-2xl border-4 border-white/40 bg-gray-950/80'
                             style={{ zIndex: 2, filter: 'brightness(1.2) contrast(1.15)' }}
