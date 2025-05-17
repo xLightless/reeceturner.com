@@ -17,8 +17,8 @@ const NotFound: React.FC = () => {
 
 const Resume: React.FC = () => {
   return (
-    <object data="/resume/reece-turner-resume.pdf" type="application/pdf" className='w-full h-screen'>
-        <p>If the PDF did not load<a href="/resume/reece-turner-resume.pdf">click here</a>.</p>
+    <object data="/resume.pdf" type="application/pdf" className='w-full h-screen'>
+        <p>If the PDF did not load<a href="/resume.pdf">click here</a>.</p>
     </object>
   )
 };
