@@ -10,20 +10,34 @@ const AboutPage: React.FC = () => {
                 {/* Description About Me */}
                 <div className='items-start'>
 
-                    <p className='mt-4 text-slate-400'>
-                        Currently, I’m developing <a href="https://securejobs.com/" className='font-bold text-white'>SecureJobs</a>, a platform that leverages
-                        AI/ML technologies with Full-Stack to improve job seeker outcomes. My role involve project management, such as creating documents for investors,
-                        and developing a distributed database with complex, and efficient, routing.
+                    <p className="mt-4 text-slate-400">
+                        I'm an aspiring Software Engineer influenced by pioneers such as Alan Turing, John von Neumann, and Ada Lovelace.
+                        Passionate about bringing products to production, my favorite work intersects design and development, especially under Agile methodologies.
                     </p>
 
-                    <p className='mt-4 text-slate-400'>
-                        In the past, my occupation was at <a href="https://nexttheme.com/" className='font-bold text-white'>Next Theme</a> and <a href="https://www.linkedin.com/company/spacebar-wsm/" className='font-bold text-white'>
-                        Space Bar</a>, where I created websites, assembled hardware, and setup File Storage Servers (FSS).
+                    <p className="mt-4 text-slate-400">
+                        Currently, I’m developing&nbsp;
+                        <a href="https://securejobs.com/" className="font-bold text-white" target="_blank" rel="noopener noreferrer">
+                            SecureJobs
+                        </a>
+                        , a platform that leverages AI/ML technologies with Full-Stack to improve job seeker outcomes.
+                        My role involves project management—such as creating documents for investors—and developing a distributed database with complex, efficient routing.
                     </p>
 
-                    <p className='mt-4 text-slate-400'>
-                        During my spare time, I enjoy reading and learning about Finance and Technology, bringing automation to financial markets
-                        such as Forex and Stocks.
+                    <p className="mt-4 text-slate-400">
+                        In the past, my occupation was at&nbsp;
+                        <a href="https://nexttheme.com/" className="font-bold text-white" target="_blank" rel="noopener noreferrer">
+                            Next Theme
+                        </a>
+                        &nbsp;and&nbsp;
+                        <a href="https://www.linkedin.com/company/spacebar-wsm/" className="font-bold text-white" target="_blank" rel="noopener noreferrer">
+                            Space Bar
+                        </a>
+                        , where I created websites, assembled hardware, and set up File Storage Servers (FSS).
+                    </p>
+
+                    <p className="mt-4 text-slate-400">
+                        During my spare time, I enjoy reading and learning about Finance and Technology, bringing automation to financial markets such as Forex and Stocks.
                     </p>
                 </div>
 
