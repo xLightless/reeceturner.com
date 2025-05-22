@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
                 <div className='items-start'>
 
                     <p className="mt-4 text-slate-400">
-                        I'm an aspiring Software Engineer influenced by pioneers such as Alan Turing, John von Neumann, and Ada Lovelace.
+                        I'm an aspiring Software Engineer influenced by pioneers such as Alan Turing, John von Neumann and Ada Lovelace.
                         Passionate about bringing products to production, my favorite work intersects design and development, especially under Agile methodologies.
                     </p>
 
@@ -21,7 +21,7 @@ const AboutPage: React.FC = () => {
                             SecureJobs
                         </a>
                         , a platform that leverages AI/ML technologies with Full-Stack to improve job seeker outcomes.
-                        My role involves project management—such as creating documents for investors—and developing a distributed database with complex, efficient routing.
+                        My role involves project management—such as creating documents for investors—and developing a distributed database with complex efficient routing.
                     </p>
 
                     <p className="mt-4 text-slate-400">
