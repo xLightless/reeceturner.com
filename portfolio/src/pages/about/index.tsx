@@ -17,9 +17,8 @@ const AboutPage: React.FC = () => {
                     </p>
 
                     <p className='mt-4 text-slate-400'>
-                        In the past, my occupation was at <a href="https://nexttheme.com/" className='font-bold text-white'>Next Theme</a> and
-                        <a href="https://www.linkedin.com/company/spacebar-wsm/" className='font-bold text-white'>Space Bar</a>,<br></br> where I created websites,
-                        assembled hardware, and setup File Storage Servers (FSS).
+                        In the past, my occupation was at <a href="https://nexttheme.com/" className='font-bold text-white'>Next Theme</a> and <a href="https://www.linkedin.com/company/spacebar-wsm/" className='font-bold text-white'>
+                        Space Bar</a>, where I created websites, assembled hardware, and setup File Storage Servers (FSS).
                     </p>
 
                     <p className='mt-4 text-slate-400'>
