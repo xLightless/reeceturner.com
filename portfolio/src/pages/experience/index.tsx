@@ -41,7 +41,7 @@ const Experience = () => {
                 </ul>
             </div>
             <div className='pl-4 relative w-full'>
-                <a className='w-fit flex flex-row items-center justify-start space-x-4' href="/resume.pdf" target="_blank">
+                <a className='w-fit flex flex-row items-center justify-start space-x-4' href="/resume.pdf">
                     <p className='text-blue-300'>View Resume </p>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-blue-300'/>
                 </a>
