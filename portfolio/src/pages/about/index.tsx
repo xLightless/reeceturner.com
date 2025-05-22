@@ -9,9 +9,23 @@ const AboutPage: React.FC = () => {
             <section className='relative w-full h-fit grid grid-cols-1 grid-rows-[auto_1fr_auto] gap-16 pl-4' id="about">
                 {/* Description About Me */}
                 <div className='items-start'>
-                    <p className='mt-4 text-slate-400'>I’m an engineer passionate about building industry standard solutions, <br></br>intersecting at design and development.</p>
-                    <p className='mt-4 text-slate-400'>Currently, I’m developing <a href="https://securejobs.com/" className='font-bold text-white'>SecureJobs</a>, a platform that leverages AI/ML technologies <br></br>with Full-Stack to improve job seeker outcomes.</p>
-                    <p className='mt-4 text-slate-400'>In the past, my occupation was at <a href="https://nexttheme.com/" className='font-bold text-white'>Next Theme</a> and <a href="https://www.linkedin.com/company/spacebar-wsm/" className='font-bold text-white'>Space Bar</a>,<br></br> where I created websites, assembled hardware, and setup File Storage Servers (FSS).</p>
+
+                    <p className='mt-4 text-slate-400'>
+                        Currently, I’m developing <a href="https://securejobs.com/" className='font-bold text-white'>SecureJobs</a>, a platform that leverages
+                        AI/ML technologies with Full-Stack to improve job seeker outcomes. My role involve project management, such as creating documents for investors,
+                        and developing a distributed database with complex, and efficient, routing.
+                    </p>
+
+                    <p className='mt-4 text-slate-400'>
+                        In the past, my occupation was at <a href="https://nexttheme.com/" className='font-bold text-white'>Next Theme</a> and
+                        <a href="https://www.linkedin.com/company/spacebar-wsm/" className='font-bold text-white'>Space Bar</a>,<br></br> where I created websites,
+                        assembled hardware, and setup File Storage Servers (FSS).
+                    </p>
+
+                    <p className='mt-4 text-slate-400'>
+                        During my spare time, I enjoy reading and learning about Finance and Technology, bringing automation to financial markets
+                        such as Forex and Stocks.
+                    </p>
                 </div>
 
                 {/* Cool image stuff */}
